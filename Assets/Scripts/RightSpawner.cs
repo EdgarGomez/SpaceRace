@@ -25,7 +25,7 @@ public class RightSpawner : MonoBehaviour
         {
             yield return new WaitForSeconds(spawnInterval);
 
-            if (GameManager.Instance.isGameOver)
+            if (GameManager.Instance.isGameOver || GameManager.Instance.isPaused)
             {
                 continue;
             }

@@ -16,7 +16,7 @@ public class TimeLine : MonoBehaviour
 
     void Update()
     {
-        if (!GameManager.Instance.isGameOver)
+        if (!GameManager.Instance.isGameOver || GameManager.Instance.isPaused)
         {
             if (GameManager.Instance.gameOverPanel.activeSelf)
             {

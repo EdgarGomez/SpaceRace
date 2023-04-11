@@ -16,6 +16,8 @@ public class PlayerController : MonoBehaviour
     public bool isPenalized = false;
     public bool isMovable = true;
 
+    public GameObject infoPanel;
+
     void Start()
     {
         initialPosition = transform.position;
@@ -25,7 +27,8 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if (isPenalized || GameManager.Instance.isGameOver)
+
+        if (isPenalized || GameManager.Instance.isGameOver || GameManager.Instance.isPaused)
         {
             return;
         }

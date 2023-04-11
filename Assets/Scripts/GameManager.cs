@@ -17,6 +17,12 @@ public class GameManager : MonoBehaviour
 
     public AudioSource backgroundMusic;
 
+    public bool isPaused = false;
+    public GameObject pausePanel;
+    public GameObject timeLine;
+
+    private bool escPressed = false;
+
     void Awake()
     {
         if (Instance == null)
@@ -27,6 +33,36 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (!escPressed)
+            {
+                if (!isGameOver)
+                {
+                    isPaused = !isPaused;
+                    Time.timeScale = isPaused ? 0 : 1;
+                    pausePanel.SetActive(isPaused);
+                    timeLine.GetComponent<SpriteRenderer>().color = isPaused ? new Color32(0, 0, 0, 255) : new Color32(255, 255, 255, 255);
+                    escPressed = true;
+                }
+            }
+            else
+            {
+                escPressed = false;
+            }
+        }
+    }
+
+    public void PauseOn()
+    {
+        isPaused = !isPaused;
+        pausePanel.SetActive(isPaused);
+        timeLine.GetComponent<SpriteRenderer>().color = isPaused ? new Color32(0, 0, 0, 255) : new Color32(255, 255, 255, 255);
+        Time.timeScale = isPaused ? 0 : 1;
     }
 
     public void AddPoints(bool isPlayer1, int pointsToAdd)
