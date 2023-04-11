@@ -65,7 +65,7 @@ public class GameManager : MonoBehaviour
     {
         isGameOver = true;
 
-        backgroundMusic.Stop(); // Stop the background music
+        backgroundMusic.Stop();
 
         if (isPlayer1Winner)
         {

@@ -460,7 +460,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &180416231
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3662,7 +3662,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fd7114d8568394498087547aba8020d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 3
   isPlayer1: 0
   collisionSound: {fileID: 8300000, guid: 651c6eac35724984da4c76cfb5ca88ac, type: 3}
   collisionEffectPrefab: {fileID: 4800498344774584107, guid: 5cd150bf1c9f2fa4cb28ffee76c13ce8, type: 3}
@@ -3670,6 +3670,13 @@ MonoBehaviour:
   penalizationTime: 1
   isPenalized: 0
   isMovable: 1
+  playerDesignSprites:
+  - {fileID: 21300000, guid: 056aae3c0da17b64fb8aa435f332c566, type: 3}
+  - {fileID: 21300000, guid: 182d46141d371814086580eea76f438b, type: 3}
+  - {fileID: 21300000, guid: 01225f30bd21ea649b04ad2ce2f4e96d, type: 3}
+  - {fileID: 21300000, guid: b202529a04360364c98463a1ba57a256, type: 3}
+  - {fileID: 21300000, guid: b158a722a0f8af649a8a3435628f915a, type: 3}
+  - {fileID: 21300000, guid: 8a3e16e18d91ff944bd7efa5f99e292c, type: 3}
 --- !u!61 &854333031
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9074,7 +9081,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fd7114d8568394498087547aba8020d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 3
   isPlayer1: 1
   collisionSound: {fileID: 8300000, guid: 651c6eac35724984da4c76cfb5ca88ac, type: 3}
   collisionEffectPrefab: {fileID: 4800498344774584107, guid: 5cd150bf1c9f2fa4cb28ffee76c13ce8, type: 3}
@@ -9082,6 +9089,13 @@ MonoBehaviour:
   penalizationTime: 1
   isPenalized: 0
   isMovable: 1
+  playerDesignSprites:
+  - {fileID: 21300000, guid: 056aae3c0da17b64fb8aa435f332c566, type: 3}
+  - {fileID: 21300000, guid: 182d46141d371814086580eea76f438b, type: 3}
+  - {fileID: 21300000, guid: 01225f30bd21ea649b04ad2ce2f4e96d, type: 3}
+  - {fileID: 21300000, guid: b202529a04360364c98463a1ba57a256, type: 3}
+  - {fileID: 21300000, guid: b158a722a0f8af649a8a3435628f915a, type: 3}
+  - {fileID: 21300000, guid: 8a3e16e18d91ff944bd7efa5f99e292c, type: 3}
 --- !u!61 &1033184691
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12562,7 +12576,19 @@ MonoBehaviour:
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1048424179}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: Player1ShipOption
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_AlphaFadeSpeed: 0.15
 --- !u!114 &1966557326
 MonoBehaviour:

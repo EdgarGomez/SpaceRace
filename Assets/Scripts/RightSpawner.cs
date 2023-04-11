@@ -19,19 +19,13 @@ public class RightSpawner : MonoBehaviour
         StartCoroutine(SpawnObjects());
     }
 
-    public void SetDifficulty(int difficulty)
-    {
-        // Set the difficulty level for this spawner
-        // You can use this method to configure the enemy waves based on the difficulty level
-    }
-
     IEnumerator SpawnObjects()
     {
         while (true)
         {
             yield return new WaitForSeconds(spawnInterval);
 
-            if (GameManager.Instance.isGameOver) // Don't spawn objects if game is over
+            if (GameManager.Instance.isGameOver)
             {
                 continue;
             }
