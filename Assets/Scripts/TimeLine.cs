@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class TimeLine : MonoBehaviour
 {
-    public float countdownDuration = 10.0f;
+    public float countdownDuration = 15.0f;
     private float remainingTime;
     private Vector3 initialScale;
     private float initialYPosition;
@@ -12,6 +12,7 @@ public class TimeLine : MonoBehaviour
         remainingTime = countdownDuration;
         initialScale = transform.localScale;
         initialYPosition = transform.position.y;
+        countdownDuration = GameManager.Instance.playTimeValue;
     }
 
     void Update()

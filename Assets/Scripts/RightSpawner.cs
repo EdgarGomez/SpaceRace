@@ -15,8 +15,32 @@ public class RightSpawner : MonoBehaviour
 
     void Start()
     {
+        switch (GameManager.Instance.difficultyLevel)
+        {
+            case 0:
+                spawnInterval = 2f;
+                minSpeed = 1f;
+                maxSpeed = 2f;
+                break;
+            case 1:
+                spawnInterval = 1.5f;
+                minSpeed = 1f;
+                maxSpeed = 3f;
+                break;
+            case 2:
+                spawnInterval = 1f;
+                minSpeed = 2f;
+                maxSpeed = 5f;
+                break;
+            default:
+                spawnInterval = 2f;
+                minSpeed = 1f;
+                maxSpeed = 2f;
+                break;
+        }
         spawnerCollider = GetComponent<BoxCollider2D>();
         StartCoroutine(SpawnObjects());
+
     }
 
     IEnumerator SpawnObjects()

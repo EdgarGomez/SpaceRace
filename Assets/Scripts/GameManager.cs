@@ -23,6 +23,13 @@ public class GameManager : MonoBehaviour
 
     private bool escPressed = false;
 
+    public int player1Ship = 0;
+    public int player2Ship = 0;
+    public int difficultyLevel = 0;
+    public int playTime = 0;
+    public float playTimeValue = 15.0f;
+
+
     void Awake()
     {
         if (Instance == null)
@@ -32,6 +39,34 @@ public class GameManager : MonoBehaviour
         else if (Instance != this)
         {
             Destroy(gameObject);
+        }
+        SetGameConfig();
+    }
+
+    void SetGameConfig()
+    {
+        player1Ship = PlayerPrefs.HasKey("Player1Ship") ? PlayerPrefs.GetInt("Player1Ship") : 0;
+        player2Ship = PlayerPrefs.HasKey("Player2Ship") ? PlayerPrefs.GetInt("Player2Ship") : 0;
+        difficultyLevel = PlayerPrefs.HasKey("DifficultyLevel") ? PlayerPrefs.GetInt("DifficultyLevel") : 0;
+        playTime = PlayerPrefs.HasKey("PlayTime") ? PlayerPrefs.GetInt("PlayTime") : 0;
+
+        switch (playTime)
+        {
+            case 0:
+                playTimeValue = 15.0f;
+                break;
+            case 1:
+                playTimeValue = 30.0f;
+                break;
+            case 2:
+                playTimeValue = 45.0f;
+                break;
+            case 3:
+                playTimeValue = 60.0f;
+                break;
+            default:
+                playTimeValue = 15.0f;
+                break;
         }
     }
 

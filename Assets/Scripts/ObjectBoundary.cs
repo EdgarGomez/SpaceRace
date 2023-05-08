@@ -17,7 +17,7 @@ public class ObjectBoundary : MonoBehaviour
         oppositeSpawner = oppositeSpawnerTransform;
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    /*void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
@@ -28,5 +28,5 @@ public class ObjectBoundary : MonoBehaviour
 
             Destroy(gameObject);
         }
-    }
+    }*/
 }
