@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -27,11 +28,13 @@ public class GameManager : MonoBehaviour
     public int player2Ship = 0;
     public int difficultyLevel = 0;
     public int playTime = 0;
-    public float playTimeValue = 15.0f;
-
+    public float playTimeValue = 15f;
+    public AudioSource player1Sound;
+    public AudioSource player2Sound;
 
     void Awake()
     {
+        Time.timeScale = isGameOver ? 0 : 1;
         if (Instance == null)
         {
             Instance = this;
@@ -53,19 +56,19 @@ public class GameManager : MonoBehaviour
         switch (playTime)
         {
             case 0:
-                playTimeValue = 15.0f;
+                playTimeValue = 15f;
                 break;
             case 1:
-                playTimeValue = 30.0f;
+                playTimeValue = 30f;
                 break;
             case 2:
-                playTimeValue = 45.0f;
+                playTimeValue = 45f;
                 break;
             case 3:
-                playTimeValue = 60.0f;
+                playTimeValue = 60f;
                 break;
             default:
-                playTimeValue = 15.0f;
+                playTimeValue = 15f;
                 break;
         }
     }
@@ -146,12 +149,19 @@ public class GameManager : MonoBehaviour
         {
             gameOverText.text = "Player 2 wins!";
         }
-
+        player1Sound.Stop();
+        player2Sound.Stop();
         gameOverPanel.SetActive(true);
+        Time.timeScale = isGameOver ? 0 : 1;
     }
 
     public void RestartGame()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene("SpaceRace");
+    }
+
+    public void GoToMenu()
+    {
+        SceneManager.LoadScene("Menu");
     }
 }

@@ -17,12 +17,31 @@ public class PlayerController : MonoBehaviour
     public bool isMovable = true;
 
     public GameObject infoPanel;
+    public Sprite[] shipSprites;
+    private int selectedSpriteIndex;
 
     void Start()
     {
         initialPosition = transform.position;
         audioSource = GetComponent<AudioSource>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        if (isPlayer1)
+        {
+            selectedSpriteIndex = GameManager.Instance.player1Ship;
+        }
+        else
+        {
+            selectedSpriteIndex = GameManager.Instance.player2Ship;
+        }
+        ChangeSprite(selectedSpriteIndex);
+    }
+
+    private void ChangeSprite(int index)
+    {
+        if (index >= 0 && index < shipSprites.Length)
+        {
+            spriteRenderer.sprite = shipSprites[index];
+        }
     }
 
     void Update()

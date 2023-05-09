@@ -1318,13 +1318,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 3
   isPlayer1: 0
-  collisionSound: {fileID: 8300000, guid: 651c6eac35724984da4c76cfb5ca88ac, type: 3}
+  collisionSound: {fileID: 8300000, guid: 5014d4806eb5bcd42b5256e87f2cda9c, type: 3}
   collisionEffectPrefab: {fileID: 4800498344774584107, guid: 5cd150bf1c9f2fa4cb28ffee76c13ce8, type: 3}
   penalizationTime: 2
   verticalInput: 0
   isPenalized: 0
   isMovable: 1
   infoPanel: {fileID: 0}
+  shipSprites:
+  - {fileID: 21300000, guid: 056aae3c0da17b64fb8aa435f332c566, type: 3}
+  - {fileID: 21300000, guid: 182d46141d371814086580eea76f438b, type: 3}
+  - {fileID: 21300000, guid: 01225f30bd21ea649b04ad2ce2f4e96d, type: 3}
+  - {fileID: 21300000, guid: b202529a04360364c98463a1ba57a256, type: 3}
+  - {fileID: 21300000, guid: b158a722a0f8af649a8a3435628f915a, type: 3}
+  - {fileID: 21300000, guid: 8a3e16e18d91ff944bd7efa5f99e292c, type: 3}
 --- !u!61 &854333031
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6504,13 +6511,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 3
   isPlayer1: 1
-  collisionSound: {fileID: 8300000, guid: 651c6eac35724984da4c76cfb5ca88ac, type: 3}
+  collisionSound: {fileID: 8300000, guid: 5014d4806eb5bcd42b5256e87f2cda9c, type: 3}
   collisionEffectPrefab: {fileID: 4800498344774584107, guid: 5cd150bf1c9f2fa4cb28ffee76c13ce8, type: 3}
   penalizationTime: 2
   verticalInput: 0
   isPenalized: 0
   isMovable: 1
   infoPanel: {fileID: 0}
+  shipSprites:
+  - {fileID: 21300000, guid: 056aae3c0da17b64fb8aa435f332c566, type: 3}
+  - {fileID: 21300000, guid: 182d46141d371814086580eea76f438b, type: 3}
+  - {fileID: 21300000, guid: 01225f30bd21ea649b04ad2ce2f4e96d, type: 3}
+  - {fileID: 21300000, guid: b202529a04360364c98463a1ba57a256, type: 3}
+  - {fileID: 21300000, guid: b158a722a0f8af649a8a3435628f915a, type: 3}
+  - {fileID: 21300000, guid: 8a3e16e18d91ff944bd7efa5f99e292c, type: 3}
 --- !u!61 &1033184691
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6714,6 +6728,8 @@ MonoBehaviour:
   difficultyLevel: 0
   playTime: 0
   playTimeValue: 15
+  player1Sound: {fileID: 1033184693}
+  player2Sound: {fileID: 854333033}
 --- !u!4 &1048424180
 Transform:
   m_ObjectHideFlags: 0
@@ -7154,8 +7170,8 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 21300000, guid: 6269663e93b77bc458fff9b8c9865e7d, type: 3}
+    m_HighlightedSprite: {fileID: 21300000, guid: 6c3ee1effd4fefd47972e8d50f04749c, type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: 6c3ee1effd4fefd47972e8d50f04749c, type: 3}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
@@ -7171,7 +7187,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1048424179}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: PauseOn
+        m_MethodName: RestartGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7638,8 +7654,8 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 21300000, guid: 6269663e93b77bc458fff9b8c9865e7d, type: 3}
+    m_HighlightedSprite: {fileID: 21300000, guid: 6c3ee1effd4fefd47972e8d50f04749c, type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: 6c3ee1effd4fefd47972e8d50f04749c, type: 3}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
@@ -7907,8 +7923,8 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 21300000, guid: 6269663e93b77bc458fff9b8c9865e7d, type: 3}
+    m_HighlightedSprite: {fileID: 21300000, guid: 6c3ee1effd4fefd47972e8d50f04749c, type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: 6c3ee1effd4fefd47972e8d50f04749c, type: 3}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
@@ -7924,7 +7940,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1048424179}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: RestartGame
+        m_MethodName: GoToMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8394,7 +8410,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1969184760
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8525,8 +8541,8 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 21300000, guid: 6269663e93b77bc458fff9b8c9865e7d, type: 3}
+    m_HighlightedSprite: {fileID: 21300000, guid: 6c3ee1effd4fefd47972e8d50f04749c, type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: 6c3ee1effd4fefd47972e8d50f04749c, type: 3}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
@@ -8542,7 +8558,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1048424179}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: PauseOn
+        m_MethodName: GoToMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
